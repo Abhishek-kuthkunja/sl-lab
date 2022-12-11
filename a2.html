@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    
+        <p>
+            enter the item1
+        </p>
+        <input type="text" id="item1">
+
+        <p>
+            number of item bought
+        </p>
+        <input type="number" id="number">
+        <p>
+            cost is
+        </p>
+        <input type="number" id="cost">
+        <br>
+        <input type="button" onclick="func()" value="submit">
+        <br>
+        <p id="final">
+
+        </p>    
+        <input type="button" value="final" onclick="func1()">
+
+    <script>
+       var a,b;
+        function func()
+        {
+            
+            a=(document.getElementById("number").value);
+            b=(document.getElementById("cost").value);
+            document.getElementById("final").innerHTML="the total cost is"+a*b;
+
+        }
+        function func1()
+        {
+            window.alert("transaction successful");
+        }
+    </script>
+    
+</body>
+</html>

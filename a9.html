@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>
+            enter the text
+        </p>
+        <input type="text" id="text" >
+        <input type="button" value="submit"  onclick="func1()">
+        <p id="final">
+
+        </p>
+    </form>
+    <script>
+        function fun()
+        {
+            
+            a=document.getElementById("text").value;
+            if(a[0]>='a' || a[a.length-1]>='a')
+            return false;
+
+            for(i=1;i<a.length-1;i++)
+            {
+                if(a[i]>='a')
+                {
+                    if(a[i-1]!='+' || a[i+1]!='+')
+                    return false;
+                }
+                
+            }
+            return true;
+        }
+        function func1()
+        {
+           
+            document.getElementById("final").innerHTML=fun();
+        }
+    </script>
+</body>
+</html>

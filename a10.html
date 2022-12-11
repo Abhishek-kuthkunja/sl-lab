@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="bakery">enter the item</label>
+    <select id="first">
+        <option value="idli">idli</option>
+        <option value="dosa">dosa</option>
+    </select>
+    <p>
+        entre the number of items
+    </p>
+    <input type="number" id="number">
+    <input type="button" value="submit" onclick="func()">
+    <p id="ans">
+
+    </p>
+    <script>
+        function func()
+        {
+            a=document.getElementById("first").value;
+            b=document.getElementById("number").value;
+            if(a=="idli")
+            {
+                c=10*b;
+            }
+            else if(a=="dosa")
+            {
+                c=20*b;
+            }
+            document.getElementById("ans").innerHTML=c;
+        }
+    </script>
+</body>
+
+</html>

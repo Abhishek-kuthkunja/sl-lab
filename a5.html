@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>
+            enter the input string
+        </p>
+        <input type="text" id="input">
+        <input type="button" value="submit" onclick="func()">
+
+        <p id="final">
+
+        </p>
+
+    </form>
+    <script>
+        function func()
+        {
+            s=document.getElementById("input").value;
+            a=s.split('');
+            for(i=0;i<a.length;i++)
+            {
+                switch(a[i]){
+                    case 'z':a[i]='a';
+                            break;
+                    case 'Z':a[i]='A';
+                    break;
+                    default:a[i]=String.fromCharCode(1+a[i].charCodeAt());
+                }
+                switch(a[i]){
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':a[i]=a[i].toUpperCase();
+                }
+            }
+            a=a.join('');
+            document.getElementById("final").innerHTML=a;
+        }
+    </script>
+</body>
+</html>
